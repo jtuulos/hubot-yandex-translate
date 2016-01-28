@@ -1,3 +1,18 @@
+// Description:
+//   Allows Hubot to translate messages using the Yandex Translate API
+//
+// Configuration
+//   YANDEX_TRANSLATE_API_KEY - Your Yandex Translate API key
+//
+// Commands:
+//   hubot translate <message> - translate message using the Yandex Translate API
+//   hubot traducir <message> - translate message using the Yandex Translate API
+//   hubot traduce <message> - translate message using the Yandex Translate API
+//   hubot tr <message> - translate message using the Yandex Translate API
+//   hubot t <message> - translate message using the Yandex Translate API
+//   hubot translate [from-to] <message> - e.g. "hubot translate fr-en merci"
+//   hubot translate [to] <message> - e.g. "hubot translate fr thanks"
+
 'use strict';
 
 var languages = require('../lib/languages');
