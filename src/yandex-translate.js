@@ -40,8 +40,13 @@ function yandexTranslate (robot) {
 
     function response (err, res, body) {
       var parsed = parse(body);
+      var parseLang = parsed.lang.split('-');
       if (parsed) {
-        command.send('HODOR hodor. ' + parsed.text);
+        command.send([
+          '> ' + input,
+          'translated from ' + parseLang[0] + ' to ' + parseLang[1] + ':',
+          '> ' + parsed.text
+        ].join('\n'));
       }
     }
   }
